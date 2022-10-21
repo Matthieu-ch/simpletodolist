@@ -1,0 +1,13 @@
+<div class='container'>
+  <h1>Ma simple liste de tâche</h1>
+  <p>une nouvelles tâches</p>
+  <input type="text" placeholder="entrer votre tâche" #task/>
+  <button (click)="onAddTask(task.value)">ajouter nouvelle tâche</button>
+  <p>quelles sont mes tâches actuelles ?</p>
+  <br>
+  <br>
+  </div>
+  <ul *ngFor="let item of list">
+    <li>{{item.name}} <button (click)="onRemoveTask(item.id)">effacer</button> <!--<button (click)="onEditTask(task.value,item.id)">modifier</button>--></li>
+  </ul>
+
